@@ -1,4 +1,6 @@
-matplotlib==3.10.1
-pandas==1.5.3
-plotly==6.0.0
-wordcloud==1.9.4
+numpy==1.21.6
+pandas
+plotly
+streamlit
+matplotlib
+wordcloud
