@@ -48,11 +48,12 @@ st.markdown(
 # Load data: remote file
 ########################################################################################
 @st.cache_data
-def load_data():
-    url = "https://github.com/Bitnair/oc_p10_poc/blob/main/test_df_with_preds.csv"
+def load_data(url):
+    url = "https://github.com/"
     df = pd.read_csv(url)
     return df
 
+df = load_data('https://github.com/Bitnair/oc_p10_poc/blob/main/test_df_with_preds.csv')
 
 # Title & intro
 st.title("Dashboard des sentiments associés aux tweets")
