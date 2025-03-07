@@ -49,7 +49,6 @@ st.markdown(
 ########################################################################################
 @st.cache_data
 def load_data(url):
-    url = "https://github.com/"
     df = pd.read_csv(url)
     return df
 
