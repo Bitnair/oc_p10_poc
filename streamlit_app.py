@@ -33,13 +33,26 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+########################################################################################
+# Load data: local file
+########################################################################################
 # Load data
+# @st.cache_data
+# def load_data(csv_path):
+#     df = pd.read_csv(csv_path)
+#     return df
+
+# df = load_data('/Users/tgeof/Documents/Documents/B - Travaux Perso/1 - Scolarité/Ingenieur IA/OpenClassroom/_Projets/10. Développez une preuve de concept/2_project/data/processed/20250307-121318/test_df_with_preds.csv')
+
+########################################################################################
+# Load data: remote file
+########################################################################################
 @st.cache_data
-def load_data(csv_path):
-    df = pd.read_csv(csv_path)
+def load_data():
+    url = "https://github.com/Bitnair/oc_p10_poc/blob/main/test_df_with_preds.csv"
+    df = pd.read_csv(url)
     return df
 
-df = load_data('/Users/tgeof/Documents/Documents/B - Travaux Perso/1 - Scolarité/Ingenieur IA/OpenClassroom/_Projets/10. Développez une preuve de concept/2_project/data/processed/20250307-121318/test_df_with_preds.csv')
 
 # Title & intro
 st.title("Dashboard des sentiments associés aux tweets")
