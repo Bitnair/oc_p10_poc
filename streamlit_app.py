@@ -52,7 +52,8 @@ def load_data(url):
     df = pd.read_csv(url)
     return df
 
-df = load_data('https://github.com/Bitnair/oc_p10_poc/blob/main/test_df_with_preds.csv')
+# Use the raw file URL from GitHub
+df = load_data('https://raw.githubusercontent.com/Bitnair/oc_p10_poc/main/test_df_with_preds.csv')
 
 # Title & intro
 st.title("Dashboard des sentiments associés aux tweets")
